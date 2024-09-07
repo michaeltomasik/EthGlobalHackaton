@@ -1,5 +1,7 @@
 // WAGMI Libraries
 import { WagmiProvider, createConfig, http, useAccount, useConnect, useDisconnect } from "wagmi";
+import { sepolia } from "wagmi/chains";
+
 import { rootstockTestnet } from 'viem/chains';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
@@ -16,12 +18,13 @@ const queryClient = new QueryClient();
 
 // Set up client
 const config = createConfig({
-  chains: [rootstockTestnet],
+  chains: [rootstockTestnet, sepolia],
   transports: {
     [rootstockTestnet.id]: http(),
+    [sepolia.id]: http(),
   },
   connectors: [
-    Web3AuthConnectorInstance([rootstockTestnet]),
+    Web3AuthConnectorInstance([sepolia]),
   ],
 });
 
