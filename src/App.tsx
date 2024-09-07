@@ -23,7 +23,6 @@ const config = createConfig({
   connectors: [
     Web3AuthConnectorInstance([rootstockTestnet]),
   ],
-  structuralSharing: false,
 });
 
 function Profile2() {
@@ -46,7 +45,7 @@ function Profile2() {
   } else {
     return (
       <div className="main">
-        <EventCreation />
+        <EventCreation config={config}/>
         {connectors.map((connector) => (
           <button className="card" key={connector.id} onClick={() => connect({ connector })}>
             {connector.name}
