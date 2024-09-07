@@ -6,9 +6,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Web3AuthConnectorInstance from "./Web3AuthConnectorInstance";
 
 import { Balance } from "./balance";
-import EventCreation from "./EventCreation.tsx";
-import BlockchainData from "./BlockchainData.tsx";
-import Profile from './Profile.tsx'
+import EventCreation from "./EventCreation";
+import BlockchainData from "./BlockchainData";
+import Profile from './Profile'
 
 import "./App2.css";
 

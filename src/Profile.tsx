@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { WagmiProvider, createConfig, http, useAccount, useConnect, useDisconnect } from "wagmi";
 import EventCreation from './EventCreation'
-import Balance from './balance.tsx'
+import Balance from './balance'
 
 import './Profile.css'
 
