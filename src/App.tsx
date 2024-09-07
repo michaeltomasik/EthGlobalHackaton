@@ -1,6 +1,7 @@
 // WAGMI Libraries
 import { WagmiProvider, createConfig, http, useAccount, useConnect, useDisconnect } from "wagmi";
 import { sepolia } from "wagmi/chains";
+import { ApolloProvider } from '@apollo/client';
 
 import { rootstockTestnet } from 'viem/chains';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -11,6 +12,7 @@ import { Balance } from "./balance";
 import EventCreation from "./EventCreation";
 import BlockchainData from "./BlockchainData";
 import Profile from './Profile'
+import client from './graphql/client';
 
 import "./App2.css";
 
@@ -63,6 +65,8 @@ function Profile2() {
 // Pass client to React Context Provider
 function App() {
   return (
+    <ApolloProvider client={client}>
+
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <Router>
@@ -86,6 +90,7 @@ function App() {
         </Router>
       </QueryClientProvider>
     </WagmiProvider>
+    </ApolloProvider>
   );
 }
 

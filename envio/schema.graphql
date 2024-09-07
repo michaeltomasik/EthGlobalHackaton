@@ -1,0 +1,13 @@
+type EventManagement_EventCreated {
+  id: ID!
+  eventId: BigInt!
+  name: String!
+  creator: String!
+}
+
+type EventManagement_ParticipantJoined {
+  id: ID!
+  eventId: BigInt!
+  participant: String!
+}
+

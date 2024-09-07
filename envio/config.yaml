@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: test
+networks:
+- id: 31
+  rpc_config:
+    url: https://rpc.testnet.rootstock.io/ipfSWKMvAyIqYyIEijfQrSpZ2JGn8s-T
+  start_block: 5494996
+  contracts:
+  - name: EventManagement
+    address:
+    - 0x233C9256A80732B734F6924A03fBB10Eb3a7Cf13
+    handler: src/EventHandlers.ts
+    events:
+    - event: EventCreated(uint256 eventId, string name, address creator)
+    - event: ParticipantJoined(uint256 eventId, address participant)
+rollback_on_reorg: false
