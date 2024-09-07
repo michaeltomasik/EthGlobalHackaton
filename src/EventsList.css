@@ -1,0 +1,63 @@
+.events-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .events-title {
+    font-family: 'Courier Prime', monospace;
+    font-size: 32px;
+    color: #4682b4;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .event-card {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .event-name {
+    font-family: 'Courier Prime', monospace;
+    font-size: 24px;
+    color: #306080;
+    margin-bottom: 10px;
+  }
+  
+  .event-creator {
+    font-family: 'Courier Prime', monospace;
+    font-size: 16px;
+    color: #4682b4;
+    margin-bottom: 15px;
+  }
+  
+  .event-creator-link {
+    color: #306080;
+    text-decoration: none;
+    border-bottom: 1px solid #306080;
+    transition: border-bottom-color 0.3s;
+  }
+  
+  .event-creator-link:hover {
+    border-bottom-color: transparent;
+  }
+  
+  .join-event-button {
+    padding: 10px 20px;
+    background-color: #4682b4;
+    color: #f0f8ff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Courier Prime', monospace;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+  }
+  
+  .join-event-button:hover {
+    background-color: #306080;
+  }
