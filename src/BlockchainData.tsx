@@ -20,32 +20,32 @@ const BlockchainData = () => {
     const [contractCalls, setContractCalls] = useState([]);
     const { writeContract, isPending, isSuccess, error } = useWriteContract();
 
-    useEffect(() => {
-        const getBlockData = async () => {
-          try {
-            const blockNumber = 5494996 // Specify the desired block number
-            const block = await web3.eth.getBlock(blockNumber);
-            setBlockData(block);
+    // useEffect(() => {
+    //     const getBlockData = async () => {
+    //       try {
+    //         const blockNumber = 5494996 // Specify the desired block number
+    //         const block = await web3.eth.getBlock(blockNumber);
+    //         setBlockData(block);
     
-            const fromBlock = 5494996;
-            const toBlock = 'latest';
-            const eventSignature = 'EventCreated(uint256 eventId, string name, address creator)'; // Specify the event signature
+    //         const fromBlock = 5494996;
+    //         const toBlock = 'latest';
+    //         const eventSignature = 'EventCreated(uint256 eventId, string name, address creator)'; // Specify the event signature
 
-            // Calculate the Keccak-256 hash of the event signature
-            const eventTopic = web3.utils.sha3(eventSignature);
+    //         // Calculate the Keccak-256 hash of the event signature
+    //         const eventTopic = web3.utils.sha3(eventSignature);
     
-            const contract = new web3.eth.Contract(abi, CONTRACT_ADDRESS);
-            const calls = await contract.getPastEvents('EventCreated', {
-                toBlock: 'latest',
-              });
-            setContractCalls(calls);
-          } catch (error) {
-            console.error('Error:', error);
-          }
-        };
+    //         const contract = new web3.eth.Contract(abi, CONTRACT_ADDRESS);
+    //         const calls = await contract.getPastEvents('EventCreated', {
+    //             toBlock: 'latest',
+    //           });
+    //         setContractCalls(calls);
+    //       } catch (error) {
+    //         console.error('Error:', error);
+    //       }
+    //     };
     
-        getBlockData();
-      }, []);
+    //     getBlockData();
+    //   }, []);
     
     const handleJoinEvent = (eventId) => {
         console.log('eventId', eventId)
