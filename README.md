@@ -21,8 +21,8 @@ Our smart contracts are written in Solidity and deployed on the Rootstock testne
 
 Our team consists of two members:
 
-1. Michal Tomasik - Full-stack Developer
-2. André Ringdorfer - Business Development
+1. [Michal Tomasik - Full-stack Developer](https://www.linkedin.com/in/mtomasik/)
+2. [André Ringdorfer - Business Development](https://www.linkedin.com/in/andre-ringdorfer/)
 
 ## Testing Instructions
 
