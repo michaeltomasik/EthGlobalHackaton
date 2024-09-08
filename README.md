@@ -1,41 +1,45 @@
-# Web3Auth (`@web3auth/no-modal`) x Web3Auth Wagmi Connector(`@web3auth/web3auth-wagmi-connector`)
+# Web3vents - Decentralized Event Management on Rootstock
 
-[![Web3Auth](https://img.shields.io/badge/Web3Auth-SDK-blue)](https://web3auth.io/docs/sdk/pnp/web/wagmi-connector)
-[![Web3Auth](https://img.shields.io/badge/Web3Auth-Community-cyan)](https://community.web3auth.io)
+## Project Description
 
-[Join our Community Portal](https://community.web3auth.io/) to get support and stay up to date with the latest news and updates.
+Web3vents is a decentralized event management platform built on the Rootstock (RSK) network, enabling users to create and manage events using smart contracts.
 
-This example demonstrates how to use Web3Auth with Wagmi Connector.
+## DEMO
 
-## How to Use
+![pic 1](./Screenshot%202024-09-08%20at%2002.02.21.png)
 
-### One-Click Deploy to Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FWeb3Auth%2Fweb3auth-pnp-examples%2Ftree%2Fmain%2Fweb-no-modal-sdk%2Fwagmi%2Fwagmi-no-modal-example&project-name=w3a-wagmi-no-modal&repository-name=w3a-wagmi-no-modal)
+![pic 2](./Screenshot%202024-09-08%20at%2002.02.25.png)
 
-### Download Manually
+## Rootstock Integration
 
-```bash
-npx degit Web3Auth/web3auth-pnp-examples/wagmi/wagmi-no-modal-example w3a-example
-```
+We chose to integrate our project with the Rootstock network because of its strong focus on Bitcoin compatibility. Many people have a strong sentiment towards Bitcoin and are more likely to use applications that are built on top of the Bitcoin ecosystem. By leveraging Rootstock, we can tap into this sentiment and attract a wider audience to our platform.
 
-Install & Run:
+Our smart contracts are written in Solidity and deployed on the Rootstock testnet. We have successfully executed at least two on-chain transactions to demonstrate the functionality of our platform.
 
-```bash
-cd w3a-example
-npm install
-npm run start
-# or
-cd w3a-example
-yarn
-yarn start
-```
+## Team
 
-## Important Links
+Our team consists of two members:
 
-- [Website](https://web3auth.io)
-- [Docs](https://web3auth.io/docs)
-- [Guides](https://web3auth.io/docs/guides)
-- [SDK / API References](https://web3auth.io/docs/sdk)
-- [Pricing](https://web3auth.io/pricing.html)
-- [Community Portal](https://community.web3auth.io)
+1. Michal Tomasik - Full-stack Developer
+2. André Ringdorfer - Business Development
+
+## Testing Instructions
+
+To test the Web3vents platform:
+
+1. Visit our website at [https://eth-global-hackaton.vercel.app/](https://eth-global-hackaton.vercel.app/).
+2. Connect your Rootstock testnet wallet (e.g., Metamask) to the platform.
+3. Create a new event by providing a name and date for the event. Other details are optional.
+4. After creating an event, you should be able to see it listed on the event list page within a short period of time.
+
+## Technology used
+
+- We used Envio for indexing the RPC data, allowing us to access it quickly via GraphQL queries.
+- We deployed smart contracts on the Rootstock blockchain for creating and attending events, ensuring the integrity and transparency of event management.
+- We integrated Web3auth as a login option to cater to users coming from a web2 background who may not have a wallet set up.
+
+
+## Links
+
+- Smart Contract Address: [https://explorer.testnet.rootstock.io/address/0x233c9256a80732b734f6924a03fbb10eb3a7cf13](https://explorer.testnet.rootstock.io/address/0x233c9256a80732b734f6924a03fbb10eb3a7cf13)
